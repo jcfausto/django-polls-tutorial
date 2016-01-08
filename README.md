@@ -24,3 +24,19 @@ $ python manage.py runserver
 ```bash
 $ python manage.py runserver 0.0.0.0:8000
 ```
+
+#Usage
+
+Access the aplication at http://localhost:8000/polls/
+
+* the port may vary due to your setup. I used a vagrant machine with
+  portforwarding between 8000 => 8001
+
+### Create a superuser to access the admin area
+```bash
+python manage.py createsuperuser
+```
+
+Fire http://localhost:8001/admin/
+
+Login with previously created admin credentials and be happy :-)
