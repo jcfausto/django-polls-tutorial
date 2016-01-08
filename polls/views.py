@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.db.models import F
 from django.views import generic
+from django.utils import timezone
 
 from .models import Choice, Question
 
