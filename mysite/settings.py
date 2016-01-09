@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'djangopolls',
         'USER': 'django',
         'PASSWORD': 'ritvik@123',
-        'HOST': 'localhost',
+        'HOST': '127.0.0.1',
         'PORT': '',
     }
 }
