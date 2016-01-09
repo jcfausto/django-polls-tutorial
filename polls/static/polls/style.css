@@ -1,0 +1,18 @@
+body {
+  background: white url("images/background.jpg") repeat;
+}
+
+li a {
+  color: green;
+}
+
+.title {
+  text-align: center;
+  color: green;
+  font-size: 45px;
+}
+
+.wrapper {
+  background: #FFFFFF;
+  padding: 10px 10px 10px 10px;
+}
