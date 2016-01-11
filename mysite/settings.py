@@ -119,13 +119,25 @@ USE_L10N = True
 
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.9/howto/static-files/
+# Parse database configuration from $DATABASE_URL
+import dj_database_url
+# comment the next line to use sqlite
+DATABASES['default'] = dj_database_url.config()
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = 'staticfiles'
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Allow all host headers
+ALLOWED_HOSTS = ['*']
+
+# Static asset configuration
 STATIC_URL = '/static/'
+#STATIC_ROOT = '/var/tmp/dashboard/collected_static' # staticfiles
+STATIC_ROOT = os.path.join(BASE_DIR, "collected_static")
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+#     #os.path.join(BASE_DIR, '../dashboard/static'),
+# )
+#STATICFILES_DIRS = (os.path.join(BASE_DIR, "dashboard", "static"),) # In Django 1.9 it looks like I don't need to explicitly list subapps static media
+STATICFILES_DIRS = () # no global static media , just the per-app
