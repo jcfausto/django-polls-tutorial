@@ -1,5 +1,12 @@
-# django-polls-tutorial
-Django polls tutorial
+# Django Polls Appp
+
+This is the django polls tutorial implementation deployed to heroku. 
+
+## Demo
+Live version at heroku: https://tranquil-beyond-8457.herokuapp.com/polls/
+Admin interface: https://tranquil-beyond-8457.herokuapp.com/admin/
+User: admin
+pass: abc@12345
 
 # To Install
 ```bash
